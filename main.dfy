@@ -6,9 +6,9 @@ import Std.Collections.Seq
 
 method Main(args: seq<string>) {
   if |args| != 3 {
-            var programName := if |args| > 0 then args[0] else "<compiler>";
+    var programName := if |args| > 0 then args[0] else "<compiler>";
     print "Usage: " + programName + " <in.fun> <out.s>\n";
-      return;
+    return;
   }
 
   var src_bytes_option := FileIO.ReadBytesFromFile(args[1]);
@@ -24,4 +24,4 @@ method Main(args: seq<string>) {
       print "Failed to read file " + args[1] + ": " + err + "\n";
     }
   }
-    }
+}

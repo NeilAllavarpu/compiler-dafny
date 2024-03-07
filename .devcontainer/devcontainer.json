@@ -1,9 +1,13 @@
 {
 	"name": "Dafny",
-	"image": "mcr.microsoft.com/dotnet/aspnet:6.0-alpine",
+	"image": "mcr.microsoft.com/dotnet/aspnet:6.0",
 	"features": {
-		"ghcr.io/cirolosapio/devcontainers-features/alpine-git:0": {},
-		"ghcr.io/cirolosapio/devcontainers-features/alpine-openssh:0": {}
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest"
+		},
+		"ghcr.io/devcontainers-contrib/features/apt-packages:1": {
+			"packages": ["openssh-client"]
+		}
 	},
 	"customizations": {
 		"vscode": {
